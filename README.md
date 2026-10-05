@@ -8,17 +8,17 @@
 |---|---|
 | SDK | `ru.rustore.sdk:pay:11.1.0` |
 | Источник | rustore-defold-pay, `master` от 08.09.2026 (`628b24b`) |
-| Нужен core | [defold-rustore-core](https://github.com/maningame/defold-rustore-core) `10.5.0` |
-| Платформы | только Android, Defold 1.9.2+ |
+| Нужен core | [defold-rustore-core](https://github.com/maningame/defold-rustore-core) `10.5.0-1` |
+| Платформы | Android, Defold 1.9.2+; на остальных — пустой модуль (так у RuStore) |
 | Документация | [rustore.ru/help/sdk/pay/defold/11-1-0](https://www.rustore.ru/help/sdk/pay/defold/11-1-0) |
 
 ## Подключение
 
-1. В `[project] dependencies` Android-цели (`platforms/<цель>/platform.settings`, не общий `game.project`) —
+1. В `[project] dependencies` Android-цели (`platforms/<цель>/platform.settings`) —
    вместе с core, сам Defold его не подтянет:
 
    ```ini
-   dependencies#N = https://github.com/maningame/defold-rustore-core/archive/refs/tags/10.5.0.zip
+   dependencies#N = https://github.com/maningame/defold-rustore-core/archive/refs/tags/10.5.0-1.zip
    dependencies#M = https://github.com/maningame/defold-rustore-pay/archive/refs/tags/11.1.0.zip
    ```
 

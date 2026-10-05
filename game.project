@@ -1,6 +1,6 @@
 [project]
 title = defold-rustore-pay
-dependencies#0 = https://github.com/maningame/defold-rustore-core/archive/refs/tags/10.5.0.zip
+dependencies#0 = https://github.com/maningame/defold-rustore-core/archive/refs/tags/10.5.0-1.zip
 
 [library]
 include_dirs = extension_rustore_pay

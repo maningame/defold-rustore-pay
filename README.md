@@ -51,13 +51,17 @@ rustorepay.purchase(json.encode({ productId = "coins_100" }), RuStorePayEnums.Pr
 
 ## Обновление с GitFlic
 
-1. `git clone https://gitflic.ru/project/rustore/rustore-defold-pay.git`, взять `master` или тег. В теге
-   `11.1.0` у RuStore в `build.gradle` осталась зависимость `pay:11.0.0` — сверяй с `versions.json`.
-2. Заменить `extension_rustore_pay` на `pay_example/extension_rustore_pay`.
-3. Версия `core` в `versions.json` новее нашей — сначала обновить
-   [defold-rustore-core](https://github.com/maningame/defold-rustore-core) и ссылку на него в `game.project`.
-4. Коммит `build: rustore pay <версия>`, тег — версия SDK. Наша правка поверх той же версии — тег
-   `<версия>-1`.
+Скриптом `tools/rustore.js` из клона defold-kb рядом с этой репой; по шагам — скилл `/rustore-update`.
+
+```
+node tools/rustore.js check                   # что нового у RuStore
+node tools/rustore.js update pay              # папка с GitFlic поверх наших отличий
+node tools/rustore.js verify --bob <bob.jar>  # сборка под Linux, Windows, macOS и Android
+```
+
+Откуда снята папка — `gitflic.json`. Отличия от GitFlic скрипт переносит трёхсторонним слиянием, конфликт —
+только там, где RuStore поменял те же строки. Тег — версия SDK, наша правка поверх той же версии —
+`<версия>-1`, `<версия>-2`.
 
 ## Лицензия
 
